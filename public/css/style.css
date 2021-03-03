@@ -1,0 +1,142 @@
+body {
+    color: #333333;
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 0 16px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* background-color: azure; */
+}
+
+.main-content {
+    flex-grow: 1;
+}
+
+input {
+    border: 1px solid #cccccc;
+    padding: 8px;
+}
+
+button {
+    cursor: pointer;
+    border: 1px solid #888888;
+    background-color: #888888;
+    color: white;
+    padding: 8px;
+}
+
+
+/* header */
+
+header {
+    margin-top: 16px;
+    margin-bottom: 48px;
+    display: flex;
+    flex-direction: row;
+}
+
+header h1 {
+    font-size: 24px;
+    margin-bottom: 16px;
+    margin: 0;
+}
+
+header a {
+    color: #888888;
+    margin-right: 16px;
+    text-decoration: none;
+}
+
+.logo {
+    flex-grow: 1;
+}
+
+
+/* end of header */
+
+
+/* footer */
+
+footer {
+    color: #888888;
+    border-top: 1px solid #eeeeee;
+    margin-top: 16px;
+    padding: 16px 0;
+}
+
+
+/* end of footer */
+
+
+/* about page */
+
+.profile-img {
+    width: 250px;
+    height: 250px;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: row;
+}
+
+.about-jea {
+    margin-left: 16px;
+}
+
+.about-jea h3 {
+    margin: 0;
+}
+
+.groups-clubs a {
+    text-decoration: none;
+    color: cadetblue;
+}
+
+.contact-form-content {
+    display: flex;
+    flex-direction: row;
+}
+
+.contant-details {
+    flex-grow: 1;
+}
+
+.contact-message {
+    flex-grow: 3.5;
+}
+
+
+/* .contact-jean form {
+    margin-top: 8px;
+} */
+
+.input-field {
+    margin-top: 8px;
+}
+
+.contact-btn {
+    margin-top: 8px;
+}
+
+
+/* end of about page */
+
+
+/* notes page */
+
+.notes-navbar {
+    margin-top: 16px;
+    margin-bottom: 48px;
+}
+
+.notes-navbar a {
+    color: #888888;
+    margin-right: 16px;
+    text-decoration: none;
+}
+
+
+/* end of notes page */

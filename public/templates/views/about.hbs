@@ -1,0 +1,91 @@
+<!DOCTYPE lang="en">
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/images/weather.png" type="image/x-icon">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>{{ title }}</title>
+</head>
+
+<body>
+    <div class="main-content">
+        {{>navbar}}
+        <div class="about-content">
+            <img class="profile-img" src="./images/jeanNiho.jpg" alt="Just nature">
+            <div class="about-jea">
+                <h3>Jean de dieu Nihorimbere</h3>
+                <p>
+                    Jean Niho is a computer scientist graduate with positive attitude, highly discipline, very committed, and ready for responsibilities.
+                    Currently completing Honours degree while pursuing a software developer internship at Nisa Finance Foundation to  gain hands-on
+                    experience to complement his coursework.He is dedicated to meeting customer requirements
+                    with innovative solutions that maximize efficiency and exceed capability targets. He is very comfortable discussing technical issues and solutions with scientists and analysts as well as clients.
+                </p>
+            </div>
+        </div>
+        <p>
+            Fluent in several programming languages including Python, Java, and website development associated skills with HTML, Javascript, CSS, Nodejs, React, Redux and firebase. Jean is goal is to gain thorough understanding of computer hardware and software while
+            seeking opportunities to apply and gain in-depth experience. He has excellent interpersonal skills, such as the ability to make technical information understandable to customers and end users. Solid background in mathematics, analysis, and
+            problem-solving.
+        </p>
+        <div class="groups-clubs">
+            <h4>
+                Groups and Clubs involved in
+            </h4>
+            <p>
+                Golden Key International Honor Society: 
+                <a href="/documents/Golden Key Membership Certificate - Jean De Dieu Nihorimbere.pdf " download="Jean-niho-Golden-Key-Membership-Certificate ">
+                    Membership Certificate
+                </a>
+            </p>
+            <p>
+                University of Cape Town Developer Student Club: 
+                <a href="/documents/Jean de dieu Nihorimbere Google DSC Participation Certificate.pdf " download="Jean-niho-Google-DSC-Participation-Certificate ">
+                    Certificate of Participation
+                </a>
+            </p>
+            <p>
+                You can access his curriculum vitae here: 
+                <a href="/documents/JEAN N - Curriculum vitae.pdf " download="Jean-niho-cv ">
+                    Jean Niho curriculum vitae
+                </a>
+            </p>
+            <p>
+                You can access his cover letter here: 
+                <a href="/documents/JEAN N - Cover letter.pdf " download="Jean-niho-cover-letter">
+                    Jean Niho cover letter
+                </a>
+            </p>
+        </div>
+        <div class="contact-jean">
+            <h4 class="contact-form-heading">
+                Feel free to contact Jean Niho and request for any further details, he is more than happy to comply.
+            </h4>
+            <form action="https://formspree.io/f/xleolqaw" method="post" id="contact-form" class="contact-form">
+                <div class="contact-form-content">
+                    <div class="contant-details">
+                        <div class="input-field">
+                            <input id="full_name" type="text" name="name" class="validate" placeholder="Your Full Name" required>
+                        </div>
+                        <div class="input-field">
+                            <input type="text" id="email " class="validate" name="email" placeholder="Your Email Address" required>
+                        </div>
+                        <div class="input-field">
+                            <input type="text" id="phone-number" class="validate" name="phone" placeholder="Your Phone Number" required>
+                        </div>
+                    </div>
+                    <div class="input-field contact-message">
+                        <textarea name="message " id="message " cols="30 " rows="7" type="text " class="contact-textarea" placeholder="Leave a message..." required></textarea>
+                    </div>
+                </div>
+                <button class="contact-btn" type="submit " value="Send ">Send</button>
+            </form>
+        </div>
+    </div>
+    {{>footer}}
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE lang="en">
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/images/weather.png" type="image/x-icon">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>{{ title }}</title>
+</head>
+
+<body>
+    <div class="main-content">
+        {{>navbar}}
+        <div class="site-details">
+            <h3>Purpose of this project</h3>
+            <p>
+                This project act as a playground for the purpose of practicing nodejs in general. Quite a lot of other topics was covered alongside nodejs such as accessing API from a browser, application deployment using git and gitHub in conjuction with heroku plateform.
+                Below is an explaination of two almost applications developed using different endpoints.
+            </p>
+        </div>
+        <div class="home-content">
+            <div class="weather-content">
+                <p>
+                    The weather link listed in the navbar allow a user to get customized weather forecast for a given city name. 
+                    The application takes in the city name inputed by a user and then at the back, gets it's coordinates using geocode api and passes the coordinates to a One Call api to get the corresponding weather forecast. 
+                    The desired features are selected and returned/displayed for the user to see.
+                </p>
+            </div>
+            <div class="notes-content">
+                <p>
+                    The notes link listed in the navbar is a little more complex, it basically allows a user to create a note by provide a title and body/content for the note.
+                    A user is able to delete a specific note by provide the note title since the notes are limited to having unique titles.
+                    A user can query for a note and/or list all available notes.
+                    At the back, we save the notes in a json file and manipulate the file accordingly.
+                </p>
+            </div>
+        </div>
+    </div>
+    {{>footer}}
+</body>
+
+</html>
