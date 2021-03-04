@@ -128,7 +128,15 @@ app.get('/help', (req, res) => {
         footerContents: 'Created by Jean Niho'
     });
 });
-
+//deal with unmatched url/links requests
+app.get('/notes/*', (req, res) => {
+    res.render('error', {
+        title: 'Notice',
+        logo: 'Notice page',
+        error: 'This functionality is still under construction. It will completed soon. In the meanwhile, please navigate other available options. Thank you for your unerstanding :)',
+        footerContents: 'Created by Jean Niho'
+    });
+});
 //deal with unmatched url/links requests
 app.get('*', (req, res) => {
     res.render('error', {

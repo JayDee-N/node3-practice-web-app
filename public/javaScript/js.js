@@ -19,7 +19,6 @@ searchForm.addEventListener('submit', (e) => {
                 } else {
                     messageOne.textContent = data.foundLocation;
                     messageTwo.textContent = data.desciption;
-                    console.log(data);
                 }
             });
         });

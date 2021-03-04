@@ -27,7 +27,9 @@ const getWeatherForecast = ({ longitude = 0, latitude = 0 } = {}, callback) => {
                 feelsLike: main.feels_like,
                 pressure: main.pressure,
                 humidity: main.humidity,
-                desciption: weather.main + ": " + weather.description
+                desciption: 'Mostly ' + weather.description + ' throughout the day.' + 'It is currently ' + main.temp +
+                    ' degrees out. However, it feels like ' + main.feels_like + ' degrees with a humidity of ' +
+                    main.humidity + '% and pressure at ' + main.pressure + 'hpa.'
             });
         }
     });
