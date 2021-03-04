@@ -13,18 +13,17 @@
 
 <body>
     <div class="main-content">
+        {{>navbar}}
         <div class="notes-navbar">
             <a href="/notes?all=all">All</a>
             <a href="/notes/query">Query</a>
             <a href="/notes/add">Add</a>
             <a href="/notes/delete">Delete</a>
         </div>
-        {{#if heading }}
-        <p>{{heading}}</p>
-        {{/if}}
-        <form action="#" class="weather-form">
-            <input class="city-name" type="text" placeholder="City name">
-            <button>Search</button>
+        <p>Provide a title for the note you would like to query</p>
+        <form action="#" class="query-note-form">
+            <input class="add-title" type="text" placeholder="Note title">
+            <button>Query</button>
         </form>
         <p id="message-1"></p>
         <p id="message-2"></p>

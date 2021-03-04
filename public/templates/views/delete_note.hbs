@@ -1,0 +1,35 @@
+<!DOCTYPE lang="en">
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/images/weather.png" type="image/x-icon">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>{{ title }}</title>
+</head>
+
+<body>
+    <div class="main-content">
+        {{>navbar}}
+        <div class="notes-navbar">
+            <a href="/notes?all=all">All</a>
+            <a href="/notes/query">Query</a>
+            <a href="/notes/add">Add</a>
+            <a href="/notes/delete">Delete</a>
+        </div>
+        <p>Provide a title for the note you would like to delete</p>
+        <form action="#" class="delete-note-form">
+            <input class="add-title" type="text" placeholder="Note title">
+            <button>Delete</button>
+        </form>
+        <p id="message-1"></p>
+    </div>
+    {{>footer}}
+
+    <script src="/javaScript/js.js"></script>
+</body>
+
+</html>

@@ -74,37 +74,7 @@ app.get('/weather', (req, res) => {
 });
 app.get('/notes', (req, res) => {
     const queryObject = req.query;
-    if (queryObject.query) {
-        return notes.readNote(queryObject.query, (data) => {
-            if (data.error) {
-                return res.send({
-                    error: data.error,
-                });
-            }
-            res.send({
-                title: data.title,
-                body: data.body,
-            });
-        });
-    } else if (queryObject.title && queryObject.body) {
-        return notes.addNotes(queryObject.title, queryObject.body, (data) => {
-            if (data.error) {
-                return res.send({
-                    error: data.error,
-                });
-            }
-            res.send(data);
-        });
-    } else if (queryObject.delete) {
-        return notes.removeNotes(queryObject.delete, (data) => {
-            if (data.error) {
-                return res.send({
-                    error: data.error,
-                });
-            }
-            res.send(data);
-        });
-    } else if (queryObject.all) {
+    if (queryObject.all) {
         return notes.listNotes((data) => {
             if (data.length == 0) {
                 return res.send({
@@ -118,6 +88,63 @@ app.get('/notes', (req, res) => {
         title: 'Notes',
         logo: 'Notes page',
         placeHolderContents: 'Make use of the available options to navigate and manipulate locally stored notes.',
+        footerContents: 'Created by Jean Niho'
+    });
+});
+app.get('/notes/add', (req, res) => {
+    const queryObject = req.query;
+    if (queryObject.title && queryObject.body) {
+        return notes.addNotes(queryObject.title, queryObject.body, (data) => {
+            if (data.error) {
+                return res.send({
+                    error: data.error,
+                });
+            }
+            res.send(data);
+        });
+    }
+    res.render('add_note', {
+        title: 'Add note',
+        logo: 'Add note',
+        footerContents: 'Created by Jean Niho'
+    });
+});
+app.get('/notes/query', (req, res) => {
+    const queryObject = req.query;
+    if (queryObject.query) {
+        return notes.readNote(queryObject.query, (data) => {
+            if (data.error) {
+                return res.send({
+                    error: data.error,
+                });
+            }
+            res.send({
+                title: data.title,
+                body: data.body,
+            });
+        });
+    }
+    res.render('query_note', {
+        title: 'Query note',
+        logo: 'Query note',
+        footerContents: 'Created by Jean Niho'
+    });
+});
+app.get('/notes/delete', (req, res) => {
+    const queryObject = req.query;
+    if (queryObject.delete) {
+        return notes.removeNotes(queryObject.delete, (data) => {
+            if (data.error) {
+                return res.send({
+                    error: data.error,
+                });
+            }
+            res.send(data);
+        });
+    }
+    res.render('delete_note', {
+        title: 'Delete note',
+        logo: 'Delete note',
         footerContents: 'Created by Jean Niho'
     });
 });
