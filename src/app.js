@@ -10,6 +10,7 @@ const notes = require('./notes.js');
 
 //init express server
 const app = express();
+const port = process.env.PORT || 3000;
 
 //paths variales
 const publicFolderPath = path.join(__dirname, '../public');
@@ -139,6 +140,6 @@ app.get('*', (req, res) => {
 });
 
 //start the server
-app.listen(3000, () => {
-    log("Server started on port 3000.")
+app.listen(port, () => {
+    log("Server started on port " + port);
 });

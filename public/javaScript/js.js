@@ -11,7 +11,7 @@ searchForm.addEventListener('submit', (e) => {
     if (location.length == 0) {
         messageOne.textContent = "You must provide a city name!";
     } else {
-        fetch('http://localhost:3000/weather?location=' + location).then((response) => {
+        fetch('/weather?location=' + location).then((response) => {
             console.log(response);
             response.json().then((data) => {
                 if (data.error) {
