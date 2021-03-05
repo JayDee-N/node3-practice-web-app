@@ -59,6 +59,7 @@ if (weatherForm) {
     queryForm.addEventListener('submit', (e) => {
         e.preventDefault();
         messageOne.textContent = 'Loading...';
+        messageTwo.textContent = '';
         const title = inputTitle.value;
         if (title.length == 0) {
             messageOne.textContent = "You must provide a valid title for the note to query.";
@@ -80,6 +81,7 @@ if (weatherForm) {
     deleteForm.addEventListener('submit', (e) => {
         e.preventDefault();
         messageOne.textContent = 'Loading...';
+        messageTwo.textContent = '';
         const title = inputTitle.value;
         if (title.length == 0) {
             messageOne.textContent = "You must provide a valid title for the note to delete.";
